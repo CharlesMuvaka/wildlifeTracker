@@ -1,0 +1,21 @@
+{{#partial "content"}}
+    <div class="container">
+        <h3 class="text-center my-4">Below is a list of all the spotted animals</h3>
+        <div class="row flex-wrap">
+            {{#each animals}}
+                <div class="col-sm-3 my-2">
+                    <div class="card1">
+                        <h3 class="text-white"> {{ animalName }} </h3>
+                        <img class="image3" src="/images/animals.jpeg" alt="">
+                        <p>Species:<span>{{ animalType }}</span></p>
+                        {{#if rareAnimalAge}}
+                            <p>Animal Age:<span>{{ rareAnimalAge }}</span></p>
+                            <p>Animal Health:<span>{{ animalHealth }}</span></p>
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+{{/partial}}
+{{>layout.hbs}}

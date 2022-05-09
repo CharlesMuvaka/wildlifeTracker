@@ -1,0 +1,42 @@
+{{#partial "content"}}
+
+    <div class="container">
+        <div class="row  ">
+            <div class="col-sm-12  d-flex flex-column align-items-center justify-content-center ">
+                <h3 class="text-white my-4">Please fill in the details for the animal sighted</h3>
+                <form class="w-75" action="/animalNormal" method="post">
+
+                    <div class="form-group w-75 mt-4">
+                        <label for="animalName">1. Enter Name of the animal</label>
+                        <input required type="text" class="form-control" name="sightAnimalName" id="animalName">
+                    </div>
+
+                    <div class="form-group w-75 my-2">
+                        <label for="rangerName">2. Enter your Name</label>
+                        <input required type="text" name="rangerName" class="form-control"  id="rangerName">
+                    </div>
+                    <div class="form-group w-75 my-2">
+                        <label for="location">3. Select animal species Sighted</label>
+                        <select disabled class="form-select my-1" name="sightAnimalType" class="form-control" id="location">
+                            <option value="">Normal Animal</option>
+                            <option value="savannah">Rare Species</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group w-75 my-2">
+                        <label for="location">6. Select place of the location</label>
+                        <select required class="form-select my-1" name="locationName" class="form-control" id="location">
+                            <option value="Savannah">Savannah</option>
+                            <option value="Mushy">Mushy</option>
+                            <option value="Equatorial">Equatorial</option>
+                            <option value="Swampy">Swampy</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn w-75 my-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+{{>layout.hbs}}
