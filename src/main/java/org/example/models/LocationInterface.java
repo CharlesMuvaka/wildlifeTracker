@@ -5,11 +5,11 @@ import java.util.List;
 public interface LocationInterface {
 
     //CREATE
-    public void add(Location location);
+    void add(Location location);
 
     //READ
-    public Location getLocationById(int id);
-    public List<Location> getAllLocations();
+     Location getLocationById(int id);
+     List<Location> getAllLocations();
 
     //UPDATE
 
