@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface SightingInterface {
 
-    public void addSighting(Sighting sight);
-    public Sighting getSightingById(int id);
-    public List<Sighting> getAllSightings();
+     void addSighting(Sighting sight);
+    Sighting getSightingById(int id);
+     List<Sighting> getAllSightings();
 }
