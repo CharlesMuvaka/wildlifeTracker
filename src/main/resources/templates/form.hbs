@@ -4,6 +4,7 @@
         <div class="row  ">
             <div class="col-sm-12  d-flex flex-column align-items-center justify-content-center ">
                 <h3 class="text-white my-4">Please fill in the details for the animal sighted</h3>
+                <i class="text-end">On submission animal will be stored and you will be redirected to the homepage</i>
                 <form action="/animal" method="post">
 
                     <div class="form3">
@@ -20,7 +21,7 @@
                             </div>
                             <div class="form-group w-100">
                                 <label for="location">3. Select animal species Sighted</label>
-                                <select disabled class="form-select my-1" name="sightAnimalType" class="form-control" id="location">
+                                <select required class="form-select my-1" name="sightAnimalType"  id="location">
                                     <option value="NRare Species">Rare Species</option>
                                     <option value="Normal Animal">Normal Animal</option>
                                 </select>
@@ -31,7 +32,7 @@
 
                             <div class="form-group w-100">
                                 <label for="location2">4. Select the health status of the animal</label>
-                                <select required class="form-select my-1" name="sightAnimalHealth" class="form-control" id="location2">
+                                <select required class="form-select my-1" name="sightAnimalHealth"  id="location2">
                                     <option value="Sick">Sick</option>
                                     <option value="Healthy">Healthy</option>
                                 </select>
@@ -47,7 +48,7 @@
 
                             <div class="form-group w-100">
                                 <label for="location">6. Select place of the location</label>
-                                <select reqiured class="form-select my-1" name="locationName" class="form-control" id="location">
+                                <select required class="form-select my-1" name="locationName" class="form-control" id="location">
                                     <option value="Savannah">Savannah</option>
                                     <option value="Mushy">Mushy</option>
                                     <option value="Equatorial">Equatorial</option>
