@@ -43,12 +43,12 @@
     * Output - Animal stored in the database;
 
 * There is a form to collect information about animals sighted.
-  * Input - Enter Animal name.
-  * Input - Enter Your name- Rangers name.
-  * Input - Select the area the animal is sighted.
-  * Input - Select the age of the animal.
-  * Input - Select the health status of the animal.
-  * Output - Animal stored in the database;
+    * Input - Enter Animal name.
+    * Input - Enter Your name- Rangers name.
+    * Input - Select the area the animal is sighted.
+    * Input - Select the age of the animal.
+    * Input - Select the health status of the animal.
+    * Output - Animal stored in the database;
 
 
 [Go Back to the top](#WildlifeTracker)
