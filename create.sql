@@ -1,4 +1,4 @@
-CREATE DATABASE wildlife_tracker_test;
+CREATE DATABASE wildlife_tracker;
 \c
 CREATE TABLE locations(
 locationid serial PRIMARY KEY,
@@ -45,3 +45,30 @@ INSERT INTO sightings(sightanimalname,sightanimaltype , rangername, locationname
 
 
 
+CREATE DATABASE wildlife_tracker_test;
+\c
+CREATE TABLE animals(
+animalid serial PRIMARY KEY,
+animalname VARCHAR,
+animalType VARCHAR,
+animalhealth VARCHAR,
+rareanimalage VARCHAR
+);
+
+CREATE TABLE sightings(
+sightingId serial PRIMARY KEY,
+sightanimalname VARCHAR,
+sightanimaltype VARCHAR,
+rangername VARCHAR,
+locationname VARCHAR,
+sightanimalage VARCHAR,
+sightanimalhealth VARCHAR,
+sightingtime timestamp
+);
+
+CREATE TABLE locations(
+locationid serial PRIMARY KEY,
+locationname VARCHAR,
+locationdescription VARCHAR,
+image VARCHAR
+);

@@ -13,9 +13,10 @@ public class Sighting {
     public String sightAnimalAge;
     public String sightAnimalHealth;
     public Timestamp sightingTime;
+    private String sightingDate;
 
 
-    public Sighting( String sightAnimalName, String sightAnimalType, String locationName, String rangerName, String sightAnimalAge, String sightAnimalHealth) {
+    public Sighting(String sightAnimalName, String sightAnimalType, String locationName, String rangerName, String sightAnimalAge, String sightAnimalHealth) {
         this.sightingId = sightingId;
         this.sightAnimalName = sightAnimalName;
         this.sightAnimalType = sightAnimalType;
@@ -23,6 +24,7 @@ public class Sighting {
         this.rangerName = rangerName;
         this.sightAnimalAge = sightAnimalAge;
         this.sightAnimalHealth = sightAnimalHealth;
+
     }
 
     @Override
@@ -30,12 +32,12 @@ public class Sighting {
         if (this == o) return true;
         if (!(o instanceof Sighting)) return false;
         Sighting sighting = (Sighting) o;
-        return sightingId == sighting.sightingId && Objects.equals(sightAnimalName, sighting.sightAnimalName) && Objects.equals(sightAnimalType, sighting.sightAnimalType) && Objects.equals(locationName, sighting.locationName) && Objects.equals(rangerName, sighting.rangerName) && Objects.equals(sightAnimalAge, sighting.sightAnimalAge) && Objects.equals(sightAnimalHealth, sighting.sightAnimalHealth) && Objects.equals(sightingTime, sighting.sightingTime);
+        return  Objects.equals(sightAnimalName, sighting.sightAnimalName) && Objects.equals(sightAnimalType, sighting.sightAnimalType) && Objects.equals(locationName, sighting.locationName) && Objects.equals(rangerName, sighting.rangerName) && Objects.equals(sightAnimalAge, sighting.sightAnimalAge) && Objects.equals(sightAnimalHealth, sighting.sightAnimalHealth) && Objects.equals(sightingTime, sighting.sightingTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sightingId, sightAnimalName, sightAnimalType, locationName, rangerName, sightAnimalAge, sightAnimalHealth, sightingTime);
+        return Objects.hash( sightAnimalName, sightAnimalType, locationName, rangerName, sightAnimalAge, sightAnimalHealth, sightingTime);
     }
 
     public int getSightingId() {
@@ -59,6 +61,8 @@ public class Sighting {
     }
 
     public void setSightAnimalType(String sightAnimalType) {
+
+
         this.sightAnimalType = sightAnimalType;
     }
 
@@ -101,5 +105,15 @@ public class Sighting {
 
     public void setSightingTime(Timestamp sightingTime) {
         this.sightingTime = sightingTime;
+    }
+
+    public String getSightingDate() {
+
+        sightingDate = DateFormat.getDateTimeInstance().format(sightingTime);
+        return sightingDate;
+    }
+
+    public void setSightingDate(String sightingDate) {
+        this.sightingDate = sightingDate;
     }
 }

@@ -65,6 +65,9 @@ h3{
 .image4{
     height: 45%;
 }
+.smallDate{
+    font-size: 10px;
+}
 .tags{
     text-decoration: none;
     color: black;

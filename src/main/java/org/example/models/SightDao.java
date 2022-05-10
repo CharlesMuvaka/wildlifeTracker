@@ -42,4 +42,12 @@ public class SightDao implements SightingInterface{
                     .executeAndFetch(Sighting.class); //fetch a list
         }
     }
+
+    @Override
+    public List<Sighting> getAllSightingsReverse() {
+        try(Connection con = DB.sql2o.open()){
+            return con.createQuery("SELECT * FROM sightings ORDER BY sightingid desc") //raw sql
+                    .executeAndFetch(Sighting.class); //fetch a list
+        }
+    }
 }
