@@ -1,23 +1,30 @@
 {{#partial "content"}}
     <div class="container">
-        <h3 class="text-center my-4">Below is a list of all the spotted animals</h3>
+        <h3 class="text-center my-4">Below is a list of all the spotted animals ordered on when sighted</h3>
+        <a class="tags px-5" href="/recent">Sort by Most Recent</a>
         <div class="row flex-wrap">
             {{#each allSights}}
                 <div class="col-sm-3 my-2">
                     <div class="card1 text-white">
-                        <p>{{sightingTime}}</p>
-                        <h3 class="text-white my-1">{{ sightAnimalName }}</h3>
-                        <img class="image3" src="/images/animal.jpeg" alt="">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p>{{sightingId}}</p>
+                            <p class="smallDate">Sighted on<br/><span>{{sightingDate}}</span></p>
+                        </div>
+
+                        <h3 class="text-white my-1">{{ sightAnimalType  }}</h3>
+                        <img class="image3" src="/images/boba.jpeg" alt="">
                         <div class="my-1">
+                            <p class="text-start">Animal Name: <span> {{ sightAnimalName }}</span></p>
                             <p class="text-start">Sighted around:  <span>{{ locationName}}</span></p>
-                            <p class="text-start">Species:  <span>{{ sightAnimalType }}</span></p>
                             <p class="text-start">Animal Age:  <span>{{ sightAnimalAge }}</span></p>
                             <p class="text-start">Animal Health Status:  <span>{{ sightAnimalHealth }}</span></p>
+
                             <p class="text-start">Ranger in charge:  <span>{{ rangerName }}</span></p>
                         </div>
                     </div>
                 </div>
             {{/each}}
+
         </div>
     </div>
 

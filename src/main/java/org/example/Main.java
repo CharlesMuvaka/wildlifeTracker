@@ -17,6 +17,8 @@ public class Main {
        public static void main(String[] args) {
         staticFileLocation("/public");
 
+
+
         //Getting the index page
         get("/",(request,response)->{
             Map<String, Object> templateData = new HashMap<>();
@@ -93,7 +95,7 @@ public class Main {
         },new HandlebarsTemplateEngine());
 
 
-        //getting sighting data of normal animal
+//        getting sighting data of normal animal
            post("/animal", (request, response)->{
                Map<String, Object> templateData = new HashMap<>();
                String animalName = request.queryParams("sightAnimalName");
@@ -133,6 +135,19 @@ public class Main {
 
 
         }, new HandlebarsTemplateEngine());
+
+           get("/recent",(request,response)->{
+               Map<String, Object> templateData = new HashMap<>();
+               SightDao sightDao = new SightDao();
+               List<Sighting> allSights = sightDao.getAllSightingsReverse();
+
+               templateData.put("allSights", allSights);
+               System.out.println(allSights);
+               return new ModelAndView(templateData,"recent.hbs");
+
+
+
+           }, new HandlebarsTemplateEngine());
 
         //getting all locations
            get("/location",(request,response)->{
