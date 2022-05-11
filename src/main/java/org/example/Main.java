@@ -100,7 +100,12 @@ public class Main {
                normalAnimalDao.addAnimal(normalAnimal);
 
 
-               return new ModelAndView(templateData,"index.hbs");
+
+            List<Sighting> allSights = sightDao.getAllSightings();
+
+            templateData.put("allSights", allSights);
+            System.out.println(allSights);
+            return new ModelAndView(templateData,"sightings.hbs");
 
         },new HandlebarsTemplateEngine());
 
@@ -128,7 +133,12 @@ public class Main {
                rareAnimalDao.addAnimal(normalAnimal);
 
 
-               return new ModelAndView(templateData,"index.hbs");
+
+               List<Sighting> allSights = sightDao.getAllSightings();
+
+               templateData.put("allSights", allSights);
+               System.out.println(allSights);
+               return new ModelAndView(templateData,"sightings.hbs");
 
            },new HandlebarsTemplateEngine());
 
