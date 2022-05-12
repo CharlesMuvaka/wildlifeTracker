@@ -4,7 +4,7 @@ import org.sql2o.Sql2o;
 
 public class DB {
 
-    public static Sql2o sql2o = new Sql2o("jdbc:postgresql://ec2-34-236-94-53.compute-1.amazonaws.com:5432/d7fba7ufgrglei", "laukiljlputcqf", "a2c1922e9fb5ab66be74fa17737423cc6fb6f6919f7a5bbe9bf19df3386de452");
+    public static Sql2o sql2o = new Sql2o("jdbc:postgresql://ec2-107-22-238-112.compute-1.amazonaws.com:5432/ddskj5i4o8vi2j", "dahrgtvvqdnrwd", "f42a32c9cc36ddc03ac643ebeb3e23f659c1acd4498e58bfce7f37f7ee91b81e");
 
 
 }
