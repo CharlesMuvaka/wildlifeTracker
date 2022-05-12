@@ -1,6 +1,8 @@
 # WildlifeTracker
 ##### By Charles - Muvaka
-### An application that to record the type of animals present in a forest undergoing destruction - CaesarCipher.
+### An application that to record the type of animals present in a forest undergoing destruction - WildlifeTracker.
+![Screenshot from 2022-05-10 00-40-33](https://user-images.githubusercontent.com/98308015/167503474-4354ea6c-9250-4a97-adf4-ebc35af869fc.png)
+
 ## Table of Content
 + [Description](#description)
 + [Installation Requirement](#Installation)
@@ -25,7 +27,6 @@
 - Jacoco Plugin
 - Handlebars Templating Engine
 
-![Screenshot from 2022-05-10 00-40-33](https://user-images.githubusercontent.com/98308015/167503474-4354ea6c-9250-4a97-adf4-ebc35af869fc.png)
 ### SetUp instructions and installation
 * Clone this repository to a location in your file system.
 * Open terminal command line then navigate to the root folder of the application.
